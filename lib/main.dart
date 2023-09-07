@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newap/cbe/cbehome.dart';
 import 'package:newap/cbe/home.dart';
+import 'package:newap/cbe/recents.dart';
 
 import 'package:newap/cbe/testpage.dart';
 import 'package:newap/homepage.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
             // ),
             ),
         // home: Myhomepage(),
-        home: loginpage());
+
+        home: cbehome());
     //home: cbehome());
     // home: listtile());
     //home: testpage());

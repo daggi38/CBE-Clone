@@ -1,6 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:newap/cbe/cbecard.dart';
+import 'package:newap/cbe/list2.dart';
+
 import 'package:newap/cbe/transactions.dart';
 
 import 'lists.dart';
@@ -27,7 +28,20 @@ class recents extends StatelessWidget {
               style: TextStyle(color: Colors.purple, fontSize: 20),
             ),
           ),
-          for (final car in posts) car
+          cbecards(),
+          Expanded(
+            flex: 1,
+            child: Container(
+              height: 200,
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: posts.length,
+                itemBuilder: (context, index) {
+                  return Container(child: posts[index]);
+                },
+              ),
+            ),
+          )
         ],
       ),
     );

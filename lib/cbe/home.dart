@@ -9,16 +9,11 @@ class loginpage extends StatefulWidget {
 }
 
 class _loginpageState extends State<loginpage> {
+  bool obsecure = true;
+
   void display() {
     setState(() {
-      // AlertDialog(
-      //   backgroundColor: Colors.blue,
-      //   content: Container(
-      //     height: 200,
-      //     child: Text('wrong'),
-      //   ),
-      // );
-      Text('wrong');
+      obsecure = !obsecure;
     });
   }
 
@@ -92,8 +87,25 @@ class _loginpageState extends State<loginpage> {
                   padding: const EdgeInsets.only(left: 75.0, right: 75),
                   child: TextField(
                     controller: _passwordcontroller,
-                    obscureText: true,
+                    obscureText: obsecure,
                     decoration: InputDecoration(
+                      suffixIcon: obsecure
+                          ? IconButton(
+                              onPressed: () {
+                                display();
+                              },
+                              icon: Icon(
+                                Icons.visibility_off,
+                                color: Colors.purple,
+                              ))
+                          : IconButton(
+                              onPressed: () {
+                                display();
+                              },
+                              icon: Icon(
+                                Icons.visibility,
+                                color: Colors.purple,
+                              )),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.deepPurple,
@@ -129,7 +141,7 @@ class _loginpageState extends State<loginpage> {
                 ),
               ),
               SizedBox(
-                height: 200,
+                height: 180,
               ),
               Center(
                   child: Text(

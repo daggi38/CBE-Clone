@@ -20,7 +20,7 @@ class recents extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 70,
+            height: 10,
           ),
           Center(
             child: Text(
@@ -29,17 +29,14 @@ class recents extends StatelessWidget {
             ),
           ),
           cbecards(),
-          Expanded(
-            flex: 1,
-            child: Container(
-              height: 200,
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: posts.length,
-                itemBuilder: (context, index) {
-                  return Container(child: posts[index]);
-                },
-              ),
+          Container(
+            height: MediaQuery.of(context).size.height,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: posts.length,
+              itemBuilder: (context, index) {
+                return Container(child: posts[index]);
+              },
             ),
           )
         ],

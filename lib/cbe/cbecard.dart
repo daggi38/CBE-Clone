@@ -8,9 +8,16 @@ class cbecards extends StatefulWidget {
 }
 
 class _cbecardsState extends State<cbecards> {
-  String obsecure = '********';
+  String hidden = '********';
+
+  bool obsecure = true;
 
   String amount = '20582.24';
+  void hidepass() {
+    setState(() {
+      obsecure = !obsecure;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +61,7 @@ class _cbecardsState extends State<cbecards> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    obsecure,
+                    obsecure ? hidden : amount,
                     style: TextStyle(
                       fontSize: 35,
                       color: Colors.white,
@@ -67,13 +74,11 @@ class _cbecardsState extends State<cbecards> {
                     onDoubleTap: () {
                       setState(() {});
                     },
-                    onTap: (() {
-                      setState(() {
-                        obsecure = amount;
-                      });
-                    }),
+                    onTap: () {
+                      hidepass();
+                    },
                     child: Text(
-                      'Show amount',
+                      obsecure ? "show amount" : "Hide",
                       style: TextStyle(
                         color: Colors.amber,
                       ),

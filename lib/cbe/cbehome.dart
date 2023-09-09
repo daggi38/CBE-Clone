@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:newap/cbe/cards.dart';
 import 'package:newap/cbe/drawer.dart';
 import 'package:newap/cbe/recents.dart';
-import 'package:newap/cbe/testpage.dart';
+import 'package:newap/cbe/homepage.dart';
 import 'package:newap/cbe/transfer.dart';
 
 import 'accounts.dart';

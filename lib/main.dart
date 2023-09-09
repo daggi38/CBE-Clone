@@ -3,7 +3,7 @@ import 'package:newap/cbe/cbehome.dart';
 import 'package:newap/cbe/home.dart';
 import 'package:newap/cbe/recents.dart';
 
-import 'package:newap/cbe/testpage.dart';
+import 'package:newap/cbe/homepage.dart';
 import 'package:newap/homepage.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             ),
         // home: Myhomepage(),
 
-        home: cbehome());
+        home: loginpage());
     //home: cbehome());
     // home: listtile());
     //home: testpage());

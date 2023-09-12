@@ -54,7 +54,7 @@ class _cbecardsState extends State<cbecards> {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 0,
               ),
               Text('Balance', style: TextStyle(color: Colors.amber[200])),
               Row(
@@ -87,21 +87,22 @@ class _cbecardsState extends State<cbecards> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(3),
                 child: Text(
                   'Saving - 1000*****6888',
                   style: TextStyle(color: Colors.amber),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(3),
                 child: Text(
-                  'Dec 7, 2022 5:40:40 PM',
+                  DateTime.now().toLocal().toString(),
+                  style: TextStyle(color: Colors.white),
                 ),
               )
             ],
           ),
-          height: 250,
+          height: 200,
           width: 400,
         ));
   }
